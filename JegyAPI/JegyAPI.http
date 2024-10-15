@@ -1,0 +1,6 @@
+@JegyAPI_HostAddress = http://localhost:5179
+
+GET {{JegyAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
