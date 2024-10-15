@@ -37,5 +37,24 @@ namespace JegyAPI.Controllers
             conn.Connection.Close();
             return jegyek;
         }
+        [HttpPost]
+        public Jegy Post(int ertekeles, string leiras)
+        {
+            conn.Connection.Open();
+            Guid Id = Guid.NewGuid();
+            DateTime CreatedTime = DateTime.Now;
+            string sql = $"INSERT INTO jegyek (Azon, Jegy, Leiras, LetrehozasiIdo) VALUES ('{Id}','{ertekeles}',{leiras},'{CreatedTime.ToString("yyyy-MM-dd HH:mm:ss")}')";
+            MySqlCommand cmd = new MySqlCommand(sql, conn.Connection);
+            cmd.ExecuteNonQuery();
+            conn.Connection.Close();
+            var result = new Jegy
+            {
+                Azon = Id,
+                Ertekeles = ertekeles,
+                Leiras = leiras,
+                CreatedTime = DateTime.Now
+            };
+            return result;
+        }
     }
 }

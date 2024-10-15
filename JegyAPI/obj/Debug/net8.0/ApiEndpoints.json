@@ -18,5 +18,36 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "JegyAPI.Controllers.ProductController",
+    "Method": "Post",
+    "RelativePath": "jegy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ertekeles",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "leiras",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JegyAPI.Models.Jegy",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
