@@ -85,5 +85,31 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "JegyAPI.Controllers.ProductController",
+    "Method": "Delete",
+    "RelativePath": "jegy",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
