@@ -37,6 +37,26 @@ namespace JegyAPI.Controllers
             conn.Connection.Close();
             return jegyek;
         }
+        [HttpGet("Id")]
+        public Jegy GetId(Guid Id)
+        {
+            conn.Connection.Open();
+            string sql = $"SELECT * FROM jegyek WHERE `Azon`=`{Id}`";
+            MySqlCommand cmd = new MySqlCommand(sql, conn.Connection);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            reader.Read();
+
+            var result = new Jegy
+            {
+                Azon = reader.GetGuid(0),
+                Ertekeles = reader.GetInt32(1),
+                Leiras = reader.GetString(2),
+                CreatedTime = reader.GetDateTime(3)
+            };
+            conn.Connection.Close();
+            return result;
+        }
         [HttpPost]
         public Jegy Post(int ertekeles, string leiras)
         {

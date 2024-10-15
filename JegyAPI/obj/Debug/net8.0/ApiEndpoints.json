@@ -111,5 +111,31 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "JegyAPI.Controllers.ProductController",
+    "Method": "GetId",
+    "RelativePath": "jegy/Id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JegyAPI.Models.Jegy",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
