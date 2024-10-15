@@ -56,5 +56,24 @@ namespace JegyAPI.Controllers
             };
             return result;
         }
+        [HttpPut]
+        public Jegy Put(Guid Id, int UjErtekeles, string UjLeiras)
+        {
+            conn.Connection.Open();
+            DateTime CreatedTime = DateTime.Now;
+            //(`Id`, `Name`, `Price`, `CreatedTime`) VALUES ('{Id}','{Name}',{Price},'{CreatedTime.ToString("yyyy-MM-dd HH:mm:ss")}')";
+            string sql = $"UPDATE `jegyek` SET `Jegy`={UjErtekeles}, `Leiras` = '{UjLeiras}' WHERE `Azon` = '{Id}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn.Connection);
+            cmd.ExecuteNonQuery();
+            conn.Connection.Close();
+            var result = new Jegy
+            {
+                Azon = Id,
+                Ertekeles = UjErtekeles,
+                Leiras = UjLeiras,
+                CreatedTime = DateTime.Now
+            };
+            return result;
+        }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JegyAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dda5fa0607da66284019b0b3143ab24f7ba3500e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02dd20eee07eac9adb618bc7ae999f7bbc233277")]
 [assembly: System.Reflection.AssemblyProductAttribute("JegyAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JegyAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

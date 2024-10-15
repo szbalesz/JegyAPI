@@ -49,5 +49,41 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "JegyAPI.Controllers.ProductController",
+    "Method": "Put",
+    "RelativePath": "jegy",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "UjErtekeles",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UjLeiras",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JegyAPI.Models.Jegy",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
